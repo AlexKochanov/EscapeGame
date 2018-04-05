@@ -24,11 +24,6 @@ public class prisonGuard {
     JButton guard3;
     JButton guard4;
     
-    int path1;
-    int path2;
-    int path3;
-    int path4;
-    
     Timer time;
     int delay = 30;
     
@@ -90,7 +85,37 @@ public class prisonGuard {
    
     public void guard1Movement() 
     {
-        
+        if(guard1X == 40)
+        {
+            setGuard1X(getGuard1X() + 1);
+        }
+        else if(guard1X == 400)
+        {
+            setGuard1X(getGuard1X() - 1);
+        }
+    }
+    
+    public void guard2Movement()
+    {
+        if (guard2Y == 40)
+        {
+            setGuard2Y(getGuard2Y() + 1);
+        }
+        else if ((guard2Y == 150)&&(guard2X == 40))
+        {
+            setGuard2Y(150);
+            setGuard2X(getGuard2X() + 1);
+        }
+        else if ((guard2Y == 150)&&(guard2X==275))
+        {
+            setGuard2Y(getGuard2Y() - 1);
+            setGuard2X(275);
+        }
+        else if ((guard2Y == 40)&&(guard2X==275))
+        {
+            setGuard2Y(40);
+            setGuard2X(getGuard2X() - 1);
+        }
     }
     
     public int getGuard1X()
