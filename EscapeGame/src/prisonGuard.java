@@ -8,7 +8,8 @@
  *
  * @author dansimons
  */
-import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.Timer;
@@ -17,29 +18,34 @@ import javax.swing.Timer;
  *
  * @author dansimons
  */
-public class prisonGuard {
+public class prisonGuard extends Rectangle {
     
+    JButton guard1;
+    JButton guard2;
+    JButton guard3;
+    JButton guard4;
     
     Timer time;
     int delay = 30;
     
     //initialize coordinates for guards once layout is complete
-    int guard1X;
-    int guard1Y;
+    int guard1X = 400;
+    int guard1Y = 150;
     
-    int guard2X;
-    int guard2Y;
+    int guard2X = 400;
+    int guard2Y = 600;
     
-    int guard3X;
-    int guard3Y;
+    int guard3X = 600;
+    int guard3Y = 400;
     
-    int guard4X;
-    int guard4Y;
+    int guard4X = 200;
+    int guard4Y = 100;
     
     public prisonGuard()
     {
-        
+       
     }
+    
 
     public void timer()
     {
