@@ -18,10 +18,7 @@ import javax.swing.Timer;
  * @author dansimons
  */
 public class prisonGuard {
-    JButton guard1;
-    JButton guard2;
-    JButton guard3;
-    JButton guard4;
+    
     
     Timer time;
     int delay = 30;
@@ -41,40 +38,9 @@ public class prisonGuard {
     
     public prisonGuard()
     {
-        initComponents();
-    }
-    
-    public void initComponents()
-    {
-        guard1 = new JButton();
-        guard1.setBackground(Color.RED);
-        guard1.setOpaque(true);
-        guard1.setBorderPainted(false);
-        guard1.setBounds(50, 50, 40, 40);
-        
-        
-        guard2 = new JButton();
-        guard2.setBackground(Color.RED);
-        guard2.setOpaque(true);
-        guard2.setBorderPainted(false);
-        guard2.setBounds(50, 50, 40, 40);
-        
-        
-        guard3 = new JButton();
-        guard3.setBackground(Color.RED);
-        guard3.setOpaque(true);
-        guard3.setBorderPainted(false);
-        guard3.setBounds(50, 50, 40, 40);
-        
-        
-        guard4 = new JButton();
-        guard4.setBackground(Color.RED);
-        guard4.setOpaque(true);
-        guard4.setBorderPainted(false);
-        guard4.setBounds(50, 50, 40, 40);
         
     }
-    
+
     public void timer()
     {
         setTimer(new Timer(getDelay(), (ActionEvent e) -> {
@@ -227,47 +193,7 @@ public class prisonGuard {
     {
         this.guard4Y = guard4Y;
     }
-    
-    public JButton getGuard1() 
-    {
-        return guard1;
-    }
-    
-    public void setGuard1(JButton guard1)
-    {
-        this.guard1 = guard1;
-    }
-    
-    public JButton getGuard2() 
-    {
-        return guard2;
-    }
-    
-    public void setGuard2(JButton guard2)
-    {
-        this.guard2 = guard2;
-    }
-    
-    public JButton getGuard3() 
-    {
-        return guard3;
-    }
-    
-    public void setGuard3(JButton guard3)
-    {
-        this.guard3 = guard3;
-    }
-    
-    public JButton getGuard4() 
-    {
-        return guard4;
-    }
-    
-    public void setGuard4(JButton guard4)
-    {
-        this.guard4 = guard4;
-    }
-    
+
     public Timer getTimer()
     {
         return time;
