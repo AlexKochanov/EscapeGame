@@ -117,6 +117,34 @@ public class prisonGuard {
         }
     }
     
+    public void guard3Movement()
+    {
+        if(guard3Y == 40)
+        {
+            setGuard3Y(getGuard3Y() + 1);
+            setGuard3X(40);
+        }
+        else if(guard3Y == 300)
+        {
+            setGuard3Y(getGuard3Y() - 1);
+            setGuard3X(40);
+        }
+    }
+    
+    public void guard4Movement()
+    {
+        if(guard4Y == 40)
+        {
+            setGuard3Y(getGuard3Y() - 1);
+            setGuard3X(40);
+        }
+        else if(guard4Y == 5)
+        {
+            setGuard3Y(getGuard3Y() + 1);
+            setGuard3X(40);
+        }
+    }
+    
     public int getGuard1X()
     {
         return guard1X;
