@@ -78,7 +78,10 @@ public class prisonGuard {
     public void timer()
     {
         setTimer(new Timer(getDelay(), (ActionEvent e) -> {
-            
+            guard1Movement();
+            guard2Movement();
+            guard3Movement();
+            guard4Movement();
         }));
     }
    
