@@ -52,6 +52,13 @@ public class Board extends JPanel
       g.fillRect(RECT_X = 300, RECT_Y = 80, RECT_WIDTH = 400, RECT_HEIGHT = 25);
       g.fillRect(RECT_X = 400, RECT_Y = 400, RECT_WIDTH = 25, RECT_HEIGHT = 550);
       g.fillRect(RECT_X = 700, RECT_Y = 80, RECT_WIDTH = 25, RECT_HEIGHT = 350);
+      g.fillRect(RECT_X = 825, RECT_Y = 80, RECT_WIDTH = 25, RECT_HEIGHT = 350);
+      g.fillRect(RECT_X = 700, RECT_Y = 700, RECT_WIDTH = 25, RECT_HEIGHT = 230);
+      g.fillRect(RECT_X = 200, RECT_Y = 750, RECT_WIDTH = 400, RECT_HEIGHT = 25);
+      g.fillRect(RECT_X = 100, RECT_Y = 600, RECT_WIDTH = 200, RECT_HEIGHT = 25);
+      g.fillRect(RECT_X = 500, RECT_Y = 550, RECT_WIDTH = 500, RECT_HEIGHT = 25);
+      g.fillRect(RECT_X = 825, RECT_Y = 700, RECT_WIDTH = 25, RECT_HEIGHT = 350);
+      g.fillRect(RECT_X = 100, RECT_Y = 500, RECT_WIDTH = 25, RECT_HEIGHT = 350);
    }
    
    //Constructor
