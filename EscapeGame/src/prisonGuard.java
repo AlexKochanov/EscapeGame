@@ -20,6 +20,7 @@ public class prisonGuard{
     
     Timer time;
     int delay = 30;
+    Board board;
     
     //initialize coordinates for guards once layout is complete
     int guard1X = 400;
@@ -36,13 +37,13 @@ public class prisonGuard{
     
     public prisonGuard()
     {
-       
+       timer();
     }
     
 
     public void timer()
     {
-        setTimer(new Timer(getDelay(), (ActionEvent e) -> {
+        setTimer(new Timer(delay, (ActionEvent e) -> {
             guard1Movement();
             guard2Movement();
             guard3Movement();
@@ -52,11 +53,11 @@ public class prisonGuard{
    
     public void guard1Movement() 
     {
-        if(guard1X == 40)
+        if(board.guard1X == 40)
         {
             setGuard1X(getGuard1X() + 1);
         }
-        else if(guard1X == 400)
+        else if(board.guard1X == 400)
         {
             setGuard1X(getGuard1X() - 1);
         }
@@ -64,21 +65,21 @@ public class prisonGuard{
     
     public void guard2Movement()
     {
-        if (guard2Y == 40)
+        if (board.guard2Y == 40)
         {
             setGuard2Y(getGuard2Y() + 1);
         }
-        else if ((guard2Y == 150)&&(guard2X == 40))
+        else if ((board.guard2Y == 150)&&(board.guard2X == 40))
         {
             setGuard2Y(150);
             setGuard2X(getGuard2X() + 1);
         }
-        else if ((guard2Y == 150)&&(guard2X==275))
+        else if ((board.guard2Y == 150)&&(board.guard2X==275))
         {
             setGuard2Y(getGuard2Y() - 1);
             setGuard2X(275);
         }
-        else if ((guard2Y == 40)&&(guard2X==275))
+        else if ((board.guard2Y == 40)&&(board.guard2X==275))
         {
             setGuard2Y(40);
             setGuard2X(getGuard2X() - 1);
@@ -87,12 +88,12 @@ public class prisonGuard{
     
     public void guard3Movement()
     {
-        if(guard3Y == 40)
+        if(board.guard3Y == 40)
         {
             setGuard3Y(getGuard3Y() + 1);
             setGuard3X(40);
         }
-        else if(guard3Y == 300)
+        else if(board.guard3Y == 300)
         {
             setGuard3Y(getGuard3Y() - 1);
             setGuard3X(40);
@@ -101,12 +102,12 @@ public class prisonGuard{
     
     public void guard4Movement()
     {
-        if(guard4Y == 40)
+        if(board.guard4Y == 40)
         {
             setGuard3Y(getGuard3Y() - 1);
             setGuard3X(40);
         }
-        else if(guard4Y == 5)
+        else if(board.guard4Y == 5)
         {
             setGuard3Y(getGuard3Y() + 1);
             setGuard3X(40);

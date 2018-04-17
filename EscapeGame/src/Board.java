@@ -25,7 +25,7 @@ public class Board extends JPanel
    JButton guard2;
    JButton guard3;
    JButton guard4;
-   
+   JButton player;
    prisonGuard prisonGuard;
 
    @Override
@@ -68,6 +68,32 @@ public class Board extends JPanel
    //Constructor
     public Board()
     {
-
+        guard1 = new JButton();
+        guard1.setBackground(Color.RED);
+        guard1.setOpaque(true);
+        guard1.setBorderPainted(false);
+        guard1.setBounds(guard1X, guard1Y, 50, 50);
+        add(guard1);
+        
+        guard2 = new JButton();
+        guard2.setBackground(Color.RED);
+        guard2.setOpaque(true);
+        guard2.setBorderPainted(false);
+        guard2.setBounds(guard2X, guard2Y, 50, 50);
+        add(guard2);
+        
+        guard3 = new JButton();
+        guard3.setBackground(Color.RED);
+        guard3.setOpaque(true);
+        guard3.setBorderPainted(false);
+        guard3.setBounds(guard3X, guard3Y, 50, 50);
+        add(guard3);
+        
+        guard4 = new JButton();
+        guard4.setBackground(Color.RED);
+        guard4.setOpaque(true);
+        guard4.setBorderPainted(false);
+        guard4.setBounds(guard4X, guard4Y, 50, 50);
+        add(guard4);
     }
 }
