@@ -31,12 +31,16 @@ public class Board extends JPanel
    @Override
    protected void paintComponent(Graphics g) {
       super.paintComponent(g);
+      g.setColor(Color.BLUE);
+      g.fillOval(30, 30, 50, 50);
       //Guards
+      g.setColor(Color.RED);
       g.fillRect(guard1X, guard1Y, 50, 50);
       g.fillRect(guard2X, guard2Y, 50, 50);
       g.fillRect(guard3X, guard3Y, 50, 50);
       g.fillRect(guard4X, guard4Y, 50, 50);
       //Borders
+      g.setColor(Color.BLACK);
       g.fillRect(RECT_X = 0, RECT_Y = 0, RECT_WIDTH = 25, RECT_HEIGHT = 1000);
       g.fillRect(RECT_X = 0, RECT_Y = 0, RECT_WIDTH = 1000, RECT_HEIGHT = 25);
       g.fillRect(RECT_X = 0, RECT_Y = 928, RECT_WIDTH = 1000, RECT_HEIGHT = 25);
