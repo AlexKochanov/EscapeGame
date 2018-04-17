@@ -10,16 +10,16 @@ public class Board extends JPanel
    private static int RECT_HEIGHT;
    
    int guard1X = 400;
-    int guard1Y = 150;
+   int guard1Y = 150;
     
-    int guard2X = 600;
-    int guard2Y = 600;
+   int guard2X = 600;
+   int guard2Y = 600;
     
-    int guard3X = 450;
-    int guard3Y = 400;
+   int guard3X = 450;
+   int guard3Y = 400;
     
-    int guard4X = 300;
-    int guard4Y = 350;
+   int guard4X = 300;
+   int guard4Y = 350;
    
    JButton guard1;
    JButton guard2;
@@ -32,7 +32,7 @@ public class Board extends JPanel
    protected void paintComponent(Graphics g) {
       super.paintComponent(g);
       g.setColor(Color.BLUE);
-      g.fillOval(30, 30, 50, 50);
+      g.fillRect(30, 30, 50, 50);
       //Guards
       g.setColor(Color.RED);
       g.fillRect(guard1X, guard1Y, 50, 50);
