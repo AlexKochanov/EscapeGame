@@ -45,7 +45,7 @@ public class Player extends Rectangle{
     
     public void playerListener()
     {
-       new KeyAdapter() {
+       board.player.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) 
             {
@@ -54,33 +54,29 @@ public class Player extends Rectangle{
                 if (k == e.VK_LEFT) 
                 {
                    moveRBLeft();
-                   //NEED TO ADD RB BOUNDS
-                   //e.g. board.playerBounds();
+                   board.playerBounds();
                    guard.getTimer().start();
                 } 
                 else if (k == e.VK_RIGHT) 
                 {
                    moveRBRight();
-                   
+                   board.playerBounds();
                    guard.getTimer().start();
-
                 } 
                 else if (k == e.VK_UP) 
                 {
                     moveRBUp();
-                    
+                    board.playerBounds();
                     guard.getTimer().start();
-
                 } 
                 else if (k == e.VK_DOWN) 
                 {
                     moveRBDown();
-                    
+                    board.playerBounds();
                     guard.getTimer().start();
                 }
-                
             }   
-        };
+        });
     }
        
   
