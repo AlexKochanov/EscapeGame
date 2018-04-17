@@ -8,22 +8,15 @@
  *
  * @author dansimons
  */
-import java.awt.Graphics;
-import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
-import javax.swing.JButton;
 import javax.swing.Timer;
 
 /**
  *
  * @author dansimons
  */
-public class prisonGuard extends Rectangle {
+public class prisonGuard{
     
-    JButton guard1;
-    JButton guard2;
-    JButton guard3;
-    JButton guard4;
     
     Timer time;
     int delay = 30;
