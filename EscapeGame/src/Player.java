@@ -1,7 +1,8 @@
 
 import java.awt.Rectangle;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
-import javax.swing.JButton;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -22,6 +23,9 @@ public class Player extends Rectangle{
      private int startingX;
     private int startingY;
     private int speed;
+    
+    Board board;
+    prisonGuard guard;
    
     private int WidthRB;
     private int HeightRB;
@@ -39,6 +43,46 @@ public class Player extends Rectangle{
         this.setSize(70, 70);
     }
     
+    public void playerListener()
+    {
+       new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) 
+            {
+                int k = e.getKeyCode();
+
+                if (k == e.VK_LEFT) 
+                {
+                   moveRBLeft();
+                   //NEED TO ADD RB BOUNDS
+                   //e.g. board.playerBounds();
+                   guard.getTimer().start();
+                } 
+                else if (k == e.VK_RIGHT) 
+                {
+                   moveRBRight();
+                   
+                   guard.getTimer().start();
+
+                } 
+                else if (k == e.VK_UP) 
+                {
+                    moveRBUp();
+                    
+                    guard.getTimer().start();
+
+                } 
+                else if (k == e.VK_DOWN) 
+                {
+                    moveRBDown();
+                    
+                    guard.getTimer().start();
+                }
+                
+            }   
+        };
+    }
+       
   
     public void reset()
     {
